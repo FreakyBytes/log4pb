@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 4.60 (Windows - x64)">
+  <section name="config">
+    <options closefiles="1" openmode="0" name="log4pb"/>
+  </section>
+  <section name="data">
+    <explorer view="" pattern="0"/>
+    <log show="1"/>
+    <lastopen date="2013-08-22 19:01" user="Martin" host="STATION3"/>
+  </section>
+  <section name="files">
+    <file name="include\interface.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="615c9a3b3a84ba70cc0ee84bbfbe1d27"/>
+    </file>
+    <file name="src\impl.pb">
+      <config load="1" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="e128bc92b4237ea28dbcb735a6da56f2"/>
+    </file>
+    <file name="src\util_assert.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="a2b3b195814c9ac9ac4bc96c9e5ead43"/>
+    </file>
+    <file name="tests\test.pb">
+      <config load="0" scan="0" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="f37e79a6f7df8e151a0ffb0e610c9113"/>
+    </file>
+    <file name="src\FormatParser.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="9d45e02042b48e86a239d370a0309eef"/>
+    </file>
+    <file name="src\structure.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="c2dea03102f49777207dc0606ddcae6a"/>
+    </file>
+    <file name="src\constants.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="f1a594eb325a5a2a58eedd4870dfa6f8"/>
+    </file>
+    <file name="src\FileAppender.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="87698b7f4eccda36a51574e1a6b8673f"/>
+    </file>
+    <file name="src\SimpleTestAppender.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="871d62185895a28f21d164294e08ca38"/>
+    </file>
+    <file name="src\Logger.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="3164e344379e66b0e9d8d9f6137df019"/>
+    </file>
+    <file name="include\interface_FormatParser.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="ef29c124a875e62902d6c99b83e64260"/>
+    </file>
+    <file name="todo.txt">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="cafc41d21cdfebe63cff66fffd76783a"/>
+    </file>
+  </section>
+  <section name="targets">
+    <target name="Test" enabled="0" default="0">
+      <inputfile value="tests\test.pb"/>
+      <outputfile value="tests\test.exe"/>
+      <executable value="tests\test.exe"/>
+      <options thread="1" user="1" debug="1"/>
+      <temporaryexe value="source"/>
+    </target>
+    <target name="Test2" enabled="0" default="1">
+      <inputfile value="src\FormatParser.pbi"/>
+      <outputfile value="tests\FormatParser.exe"/>
+      <executable value="tests\FormatParser.exe"/>
+      <options thread="1" user="1" debug="1"/>
+      <constants>
+        <constant value="#ParseTest = 1" enable="1"/>
+      </constants>
+    </target>
+    <target name="log4pb Dll Build x64" enabled="1" default="0">
+      <inputfile value="src\impl.pb"/>
+      <outputfile value="bin\log4pb_x64.dll"/>
+      <compiler version="PureBasic 5.11 (Windows - x64)"/>
+      <executable value="bin\log4pb_x64.dll"/>
+      <options user="1" debug="1"/>
+      <temporaryexe value="source"/>
+      <format exe="dll" cpu="0"/>
+    </target>
+    <target name="log4pb DLL Build x86" enabled="1" default="0">
+      <inputfile value="src\impl.pb"/>
+      <outputfile value="bin\log4pb_x86.dll"/>
+      <compiler version="PureBasic 5.11 (Windows - x86)"/>
+      <executable value="bin\log4pb_x86.dll"/>
+      <options user="1" debug="1"/>
+      <format exe="dll" cpu="0"/>
+    </target>
+  </section>
+</project>
